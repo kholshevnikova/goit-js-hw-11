@@ -17,7 +17,7 @@ const searchForm = document.querySelector('.search-form');
 // console.log(searchForm);
 const searchInfo = document.querySelector('.js-search-input');
 // console.log(searchInfo);
-const galleryEl = document.querySelector('.js-list');
+const galleryEl = document.querySelector('.gallery');
 const loaderEl = document.querySelector('.loader')
 
 
