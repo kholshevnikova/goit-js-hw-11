@@ -5,7 +5,6 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -43,6 +42,9 @@ border: none;
   color: #fff;
   text-align: center;
 }
+.btn:hover {
+  background-color: #6C8CFF;
+}
 
 .form-control {
   border-radius: 4px;
@@ -52,4 +54,69 @@ border: none;
     padding-left: 16px;
     border: 1px solid rgb(128, 128, 128);
     
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #407dd1;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.gallery-item {
+  width: 300px;
+  border: 1px solid rgb(128, 128, 128);
+    height: auto;
+}
+.gallery-img {
+  width: 100%;
+  height: 200px;
+}
+.gallery-text-container {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gallery-text-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2e2f42;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 400;
 }
